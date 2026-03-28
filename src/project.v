@@ -24,4 +24,14 @@ module tt_um_cluso99_sap1 (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
+cpu cpu0(
+    .ena(ena),
+    .clk(clk),
+    .reset(~rst_n),
+    .input_wires(ui_in),
+    .output_wires(uo_out),
+    .io_in_wires(uio_in),
+    .io_out_wires(uio_out)
+);
+
 endmodule
