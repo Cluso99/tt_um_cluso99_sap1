@@ -4,7 +4,7 @@
  */
 
 module cpu(
-    input wire clk, reset, prog, 
+    input wire ena, clk, reset, 
     output reg[7:0] output_register, 
     input wire[7:0] input_wires, 
     io wire [7:0] io_wires
